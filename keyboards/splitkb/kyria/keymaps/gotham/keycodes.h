@@ -2,7 +2,7 @@
 
 #include "quantum.h"
 
-enum layers { _QWERTY = 0, _LOWER, _RAISE, _ADJUST };
+enum layers { _QWERTY = 0, _LOWER, _RAISE, _NAV ,_ADJUST };
 
 enum custom_keycodes {
     ENC_MODE_L = SAFE_RANGE,
