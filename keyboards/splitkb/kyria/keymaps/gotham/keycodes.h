@@ -2,7 +2,7 @@
 
 #include "quantum.h"
 
-enum layers { _QWERTY = 0, _LOWER, _RAISE, _NAV ,_ADJUST };
+enum layers { _QWERTY = 0, _SYM, _NUM, _NAV, _MSE, _FUN };
 
 enum custom_keycodes {
     ENC_MODE_L = SAFE_RANGE,
@@ -10,7 +10,6 @@ enum custom_keycodes {
     TMB_MODE,
 };
 
-#define ESC_RAISE LT(_RAISE, KC_ESC)
-#define BSLS_RAISE LT(_RAISE, KC_BSLS)
-#define SFT_QUOT MT(MOD_RSFT, KC_QUOT)
-#define CTL_MINS MT(MOD_RCTL, KC_MINS)
+#define SFT_QUOT   MT(MOD_RSFT, KC_QUOT)
+#define CTL_MINS   MT(MOD_RCTL, KC_MINS)
+#define MUTE_MIC   C(S(KC_M))
