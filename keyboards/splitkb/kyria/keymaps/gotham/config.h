@@ -18,6 +18,7 @@
 
 #define EE_HANDS
 #define IGNORE_MOD_TAP_INTERRUPT
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 // Fix for Elite C rev3
 #define SPLIT_USB_DETECT

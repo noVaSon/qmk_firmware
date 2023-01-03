@@ -5,6 +5,7 @@ MOUSEKEY_ENABLE    = yes # Mouse keys
 OLED_ENABLE = no
 OLED_DRIVER = SSD1306    # Enables the use of OLED displays
 THUMBSTICK_ENABLE  = no  # Enables analog thumbstick code
+CAPS_WORD_ENABLE = yes
 
 ifeq ($(strip $(ENCODER_ENABLE)), yes)
 	SRC += encoder_utils.c
