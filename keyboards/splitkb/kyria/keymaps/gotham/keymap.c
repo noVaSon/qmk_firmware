@@ -137,11 +137,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * Function Layer: Function keys, RGB
  * TODO add mic mute
- */
-    [_FUN] = LAYOUT(
-      DB_TOGG, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                       KC_F12,   KC_F7,   KC_F8,    _______, _______,  _______,
-      _______, _______, _______, _______, _______, _______,                                       KC_F11, KC_F4, KC_F5, KC_F6, _______, _______,
-      _______, _______, _______, _______, KC_MUTE, KC_VOLD, _______, _______,   _______, _______, KC_F10, KC_F1, KC_F2, KC_F3, _______, _______,
+*/
+    [_FUN] =LAYOUT(
+      DB_TOGG, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                       KC_F12,   KC_F7,   KC_F8,  KC_F9,  _______, TEAMS_CAM,
+      _______, _______, _______, _______, _______, KC_VOLD,                                       KC_F11,   KC_F4,   KC_F5,  KC_F6,  _______, TEAMS_HAND,
+      _______, _______, _______, _______, _______, KC_MUTE, _______, _______,   _______, _______, KC_F10,   KC_F1,   KC_F2,  KC_F3,  _______, TEAMS_HANGUP,
                                  _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______
     ),
 };
