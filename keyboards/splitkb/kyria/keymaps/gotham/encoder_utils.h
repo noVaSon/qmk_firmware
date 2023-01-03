@@ -6,10 +6,10 @@
 
 typedef enum {
     ENC_MODE_LEFT_RIGHT = 0,
-    ENC_MODE_WORD_NAV,
+    // ENC_MODE_WORD_NAV,
     ENC_MODE_UP_DOWN,
-    ENC_MODE_VOLUME,
-    ENC_MODE_TAB,
+    // ENC_MODE_VOLUME,
+    // ENC_MODE_TAB,
 
     _ENC_MODE_LAST  // Do not use, except for looping through enum values
 } encoder_mode_t;

@@ -59,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ),
 
 
-    [_CARP] = LAYOUT(
+    [_CARP  ] = LAYOUT(
       KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_P,            KC_EQL,
       KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
       KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_ENT), LT(_NUM, KC_DEL ),      XXXXXXX,         ENC_MODE_R
+                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_ENT), LT(_NUM, KC_DEL ),      XXXXXXX,         KC_KB_MUTE
     ),
 
 
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, KC_WH_L,    C(KC_LEFT), KC_UP,   C(KC_RGHT),   KC_WH_R,                                        KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_BTN4, KC_ACL0,
       _______, KC_HOME,    KC_LEFT,    KC_DOWN,   KC_RGHT,    KC_END,                                         KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_ACL1,
       _______, C(KC_Z),    C(KC_X),     C(KC_C),   C(KC_V),  C(KC_Y),   _______, _______,   _______, _______,  XXXXXXX, XXXXXXX, KC_BTN3, XXXXXXX, KC_BTN6, KC_ACL2,
-                                        _______, _______,     _______, _______, _______,   _______, _______, _______, _______, _______
+                                        _______, _______,     _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
   ),
 
 // /*

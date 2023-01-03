@@ -2,14 +2,14 @@
 
 void encoder_utils_init(void) {
     encoder_left_mode  = ENC_MODE_LEFT_RIGHT;
-    encoder_right_mode = ENC_MODE_TAB;
+    encoder_right_mode = ENC_MODE_VOLUME;
 }
 
 void set_encoder_mode(bool left, encoder_mode_t mode) {
     if (left) {
         encoder_left_mode = mode;
     } else {
-        encoder_right_mode = mode;
+        // encoder_right_mode = mode;
     }
 }
 
@@ -49,17 +49,17 @@ void encoder_action_word_nav(uint8_t clockwise) {
 
 void encoder_action_left_right(uint8_t clockwise) {
     if (clockwise) {
-        tap_code(KC_RIGHT);
+        tap_code(KC_WH_R);
     } else {
-        tap_code(KC_LEFT);
+        tap_code(KC_WH_L);
     }
 }
 
 void encoder_action_up_down(uint8_t clockwise) {
     if (clockwise) {
-        tap_code(KC_UP);
+        tap_code(KC_WH_U);
     } else {
-        tap_code(KC_DOWN);
+        tap_code(KC_WH_D);
     }
 }
 
