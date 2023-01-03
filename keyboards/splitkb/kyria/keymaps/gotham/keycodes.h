@@ -10,8 +10,7 @@ enum custom_keycodes {
     TMB_MODE,
 };
 
-#define MUTE_MIC   C(S(KC_M))
-
+#define TEAMS_MUTE_MIC   C(S(KC_M))
 #define TEAMS_CAM    S(C(KC_O))
 #define TEAMS_HAND   S(C(KC_K))
 #define TEAMS_HANGUP S(C(KC_H))
