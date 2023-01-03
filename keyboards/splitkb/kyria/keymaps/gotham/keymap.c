@@ -45,46 +45,76 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      |      |      |         |
  *                        |      |      |      |      |      |  |      |      |      |      | mute mic|
  *                        `----------------------------------'  `----------------------------------'
+*  TODO 3l layout, split layout
+* TODO extra layout 3L Colemak qglm*
+* TODO macro
+* TODO comment?
 */
 
     [_QWERTY] = LAYOUT(
-      _______,           KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                 KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
-      KC_ESC ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
-      KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              _______,      MO(_FUN),            MO(_FUN),             _______,             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         CTL_MINS,
-                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM,    KC_TAB), LT(_SYM,  KC_SPC),      MO(_MSE),            MO(_NAV),     LT(_SYM, KC_ENT), LT(_NAV,  KC_BSPC),           KC_DEL,          MUTE_MIC
+      KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
+      KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
+      KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_ENT), LT(_NUM, KC_DEL ),      XXXXXXX,         ENC_MODE_R
     ),
 
-// TODO: Layer Switching, HRM, NUMPAD
+// /*
+//  * Symbol Layer: Symbols only
+//  TODO: 3l layout
+//  */
+//     [_SYM] = LAYOUT(
+//       _______, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+//       _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                        KC_MINS, KC_PLUS, KC_ASTR, KC_SLSH, KC_PERC, _______,
+//       _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______,   _______, _______, KC_AMPR, KC_PIPE, KC_COMM, KC_DOT,  KC_SLSH, _______,
+//                                  _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______
+//     ),
+
+
 
 /*
  * Symbol Layer: Symbols only
+ * Layout follows suggestion of 3L Layout: https://jack.rosenth.al/3l/)
  */
     [_SYM] = LAYOUT(
-      _______, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                       _______, _______, _______, _______, _______, _______,
-      _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                        KC_MINS, KC_PLUS, KC_ASTR, KC_SLSH, KC_PERC, _______,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______,   _______, _______, KC_AMPR, KC_PIPE, KC_COMM, KC_DOT,  KC_SLSH, _______,
-                                 _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______
+      _______, KC_DQT,  KC_UNDS, KC_LBRC, KC_RBRC, KC_CIRC,                                        KC_EXLM, KC_LT,   KC_GT,   KC_EQL,  KC_AMPR, _______,
+      _______, KC_SLSH, KC_MINS, KC_LCBR, KC_RCBR, KC_ASTR,                                        KC_QUES, KC_LPRN, KC_RPRN, KC_QUOT, KC_COLN, _______,
+      _______, KC_HASH, KC_DLR,  KC_PIPE, KC_TILD, KC_GRV, _______, _______,     _______, _______, KC_PLUS, KC_PERC, KC_BSLS, KC_AT,   XXXXXXX,   _______,
+                                _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______
     ),
+
+
 
 /*
 * Nav Layer: movement and history
 */
     [_NAV] = LAYOUT(
-      _______, _______,    C(KC_LEFT), KC_UP,   C(KC_RGHT),   _______,                                       _______, _______, _______, _______, _______, _______,
-      _______,   KC_HOME,  KC_LEFT,    KC_DOWN,   KC_RGHT,    KC_END,                                        _______, _______, _______, _______, _______, _______,
-      _______, C(KC_Z),    KC_CUT,     KC_COPY,   KC_PSTE,  C(KC_Y),   _______, _______,   _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, KC_WH_L,    C(KC_LEFT), KC_UP,   C(KC_RGHT),   KC_WH_R,                                        KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_BTN4, KC_ACL0,
+      _______, KC_HOME,    KC_LEFT,    KC_DOWN,   KC_RGHT,    KC_END,                                         KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_ACL1,
+      _______, C(KC_Z),    C(KC_X),     C(KC_C),   C(KC_V),  C(KC_Y),   _______, _______,   _______, _______,  XXXXXXX, XXXXXXX, KC_BTN3, XXXXXXX, KC_BTN6, KC_ACL2,
                                         _______, _______,     _______, _______, _______,   _______, _______, _______, _______, _______
   ),
 
-/*
-* Mouse Layer: mouse control
-*/
-    [_MSE] = LAYOUT(
-      _______, _______,  _______, _______, _______, _______,                                       _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_ACL0,
-      _______, _______,  _______, _______, _______, _______,                                       _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ACL1,
-      _______, C(KC_Z),  KC_CUT,  KC_COPY, KC_PSTE, C(KC_Y), _______, _______,   _______, _______, KC_PGDN, _______, KC_BTN3, _______, _______, KC_ACL2,
-                                  _______, _______, _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
-  ),
+// /*
+// * Mouse Layer: mouse control
+// TODO> SWAP sides with eddssf
+// */
+//     [_MSE] = LAYOUT(
+//       _______, _______,  _______, _______, _______, _______,                                       _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_ACL0,
+//       _______, _______,  _______, _______, _______, _______,                                       _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ACL1,
+//       _______, C(KC_Z),  KC_CUT,  KC_COPY, KC_PSTE, C(KC_Y), _______, _______,   _______, _______, KC_PGDN, _______, KC_BTN3, _______, _______, KC_ACL2,
+//                                   _______, _______, _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
+//   ),
+
+// /*
+// * Mouse Layer: mouse control
+// TODO> SWAP sides with eddssf
+// */
+//     [_MSE] = LAYOUT(
+//       _______, _______,  _______, _______, _______, _______,                                       KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_BTN4, KC_ACL0,
+//       _______, _______,  _______, _______, _______, _______,                                       KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_ACL1,
+//       _______, C(KC_Z),  KC_CUT,  KC_COPY, KC_PSTE, C(KC_Y), _______, _______,   _______, _______, XXXXXXX, XXXXXXX, KC_BTN3, XXXXXXX, KC_BTN6, KC_ACL2,
+//                                   _______, _______, _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
+//   ),
 
 /*
  * Numblock layer
@@ -93,13 +123,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______,  _______, _______, _______,                                      KC_COMM,  KC_7,    KC_8,    KC_9,  KC_ASTR, KC_PSLS,
       _______, _______, _______,  _______, _______, _______,                                      KC_DOT,   KC_4,    KC_5,    KC_6,  KC_PEQL, KC_AMPR,
       _______, _______, _______, _______, _______, _______, _______, _______,   _______, _______, KC_0,     KC_1,    KC_2,    KC_3,  KC_PLUS, KC_PMNS,
-                                 _______, _______, _______, _______, _______,   _______, _______, _______,  _______, _______
+                                 _______, _______, _______, _______, _______,   _______, _______, _______,  _______, KC_0
     ),
 
 
 /*
  * Function Layer: Function keys, RGB
-  */
+ * TODO add mic mute
+ */
     [_FUN] = LAYOUT(
       DB_TOGG, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                       KC_F12,   KC_F7,   KC_F8,    _______, _______,  _______,
       _______, _______, _______, _______, _______, _______,                                       KC_F11, KC_F4, KC_F5, KC_F6, _______, _______,

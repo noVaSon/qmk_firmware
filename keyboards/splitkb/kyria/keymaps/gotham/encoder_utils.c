@@ -2,7 +2,7 @@
 
 void encoder_utils_init(void) {
     encoder_left_mode  = ENC_MODE_LEFT_RIGHT;
-    encoder_right_mode = ENC_MODE_VOLUME;
+    encoder_right_mode = ENC_MODE_TAB;
 }
 
 void set_encoder_mode(bool left, encoder_mode_t mode) {
@@ -63,6 +63,13 @@ void encoder_action_up_down(uint8_t clockwise) {
     }
 }
 
+void encoder_action_tab(uint8_t clockwise){
+    if (clockwise) {
+        tap_code16(KC_TAB);
+    } else {
+        tap_code16(S(KC_TAB));
+    }
+}
 
 void encoder_action(encoder_mode_t mode, uint8_t clockwise) {
     switch (mode) {
@@ -75,7 +82,9 @@ void encoder_action(encoder_mode_t mode, uint8_t clockwise) {
         case ENC_MODE_LEFT_RIGHT:
             encoder_action_left_right(clockwise);
             break;
-// TODO: Tabbing
+        case ENC_MODE_TAB:
+            encoder_action_tab(clockwise);
+            break;
         case ENC_MODE_UP_DOWN:
             encoder_action_up_down(clockwise);
             break;
