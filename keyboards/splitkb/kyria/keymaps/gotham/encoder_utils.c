@@ -2,7 +2,7 @@
 
 void encoder_utils_init(void) {
     encoder_left_mode  = ENC_MODE_LEFT_RIGHT;
-    encoder_right_mode = ENC_MODE_VOLUME;
+    // encoder_right_mode = ENC_MODE_VOLUME;
 }
 
 void set_encoder_mode(bool left, encoder_mode_t mode) {
@@ -73,17 +73,17 @@ void encoder_action_tab(uint8_t clockwise){
 
 void encoder_action(encoder_mode_t mode, uint8_t clockwise) {
     switch (mode) {
-        case ENC_MODE_VOLUME:
-            encoder_action_volume(clockwise);
-            break;
-        case ENC_MODE_WORD_NAV:
-            encoder_action_word_nav(clockwise);
-            break;
+        // case ENC_MODE_VOLUME:
+        //     encoder_action_volume(clockwise);
+        //     break;
+        // case ENC_MODE_WORD_NAV:
+        //     encoder_action_word_nav(clockwise);
+        //     break;
         case ENC_MODE_LEFT_RIGHT:
             encoder_action_left_right(clockwise);
             break;
-        case ENC_MODE_TAB:
-            encoder_action_tab(clockwise);
+        // case ENC_MODE_TAB:
+        //     encoder_action_tab(clockwise);
             break;
         case ENC_MODE_UP_DOWN:
             encoder_action_up_down(clockwise);
