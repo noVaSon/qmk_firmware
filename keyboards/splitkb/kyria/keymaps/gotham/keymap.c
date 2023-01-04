@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //                                                   ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_SPC), LT(_NUM, KC_DEL ),      XXXXXXX,         ENC_MODE_R
     // ),
 
-ts// 5 swap qwkrfy
+// 5 swap qwkrfy
 
     // [_BASE  ] = LAYOUT(
     //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            KC_EQL,
