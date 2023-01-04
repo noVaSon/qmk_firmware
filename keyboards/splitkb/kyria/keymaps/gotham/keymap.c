@@ -55,18 +55,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
     //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
     //   KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-    //                                                   ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_ENT), LT(_NUM, KC_DEL ),      XXXXXXX,         ENC_MODE_R
+    //                                                   ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_SPC), LT(_NUM, KC_DEL ),      XXXXXXX,         ENC_MODE_R
     // ),
 
+// 5 swap qwkrfy
 
-    [_CARP  ] = LAYOUT(
-      KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_P,            KC_EQL,
-      KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
-      KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_BSPC),     LT(_SYM, KC_ENT), LT(_NUM, KC_DEL ),      XXXXXXX,         KC_MUTE
-    ),
+    // [_CARP  ] = LAYOUT(
+    //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            KC_EQL,
+    //   KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
+    //   KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+    //                                                   ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_SPC),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
 
+// QGMLWY
+        [_CARP  ] = LAYOUT(
+        KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            KC_EQL,
+        KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_T),       LSFT_T(KC_N),   MT(KC_HYPR, KC_R),                                                                                    MT(KC_HYPR, KC_I),       RSFT_T(KC_A),    RCTL_T(KC_E),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
+        KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_J,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_P,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                        ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_ENT),    LT(_NAV, KC_TAB),      LT(_NAV, KC_SPC),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+        ),
 
+// QGMLWY
+        [_CARP  ] = LAYOUT(
+        KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            KC_EQL,
+        KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_T),       LSFT_T(KC_N),   MT(KC_HYPR, KC_R),                                                                                    MT(KC_HYPR, KC_I),       RSFT_T(KC_A),    RCTL_T(KC_E),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
+        KC_LCTL,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_J,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_P,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                        ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_DEL ),      LT(_SYM,  KC_ENT),    LT(_NAV, KC_TAB),      LT(_NAV, KC_SPC),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+        ),
 // /*
 //  * Symbol Layer: Symbols only
 //  TODO: 3l layout
@@ -197,7 +212,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         oled_on();
 #    endif
     } else if (index == 1) {
-        encoder_action(get_encoder_mode(false), clockwise);
+        encoder_action_volume(clockwise); //get_encoder_mode(false), clockwise);
 #    ifdef OLED_ENABLE
         oled_on();
 #    endif
