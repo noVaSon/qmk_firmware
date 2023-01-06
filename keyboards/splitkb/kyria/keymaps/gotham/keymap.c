@@ -60,12 +60,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // shifting slowly
 
-    [_BASE] = LAYOUT(
-      KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            KC_EQL,
-      KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
-      KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                      ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_ENT ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_ENT),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    ),
+    // [_BASE] = LAYOUT(
+    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            KC_EQL,
+    //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
+    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+    //                                                   ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_ENT ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_ENT),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
 
 // 5 swap qwkrfy
 
@@ -99,6 +99,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_J,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
     //                                                 ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_ENT ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_ENT),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
     // ),
+
+
+// norman https://sourceforge.net/p/qwpr/wiki/Home/
+    [_BASE  ] = LAYOUT(
+    KC_ESC,             KC_Q,           KC_W,             KC_D,               KC_F,                KC_K,                                                                                                   KC_J,               KC_U,            KC_R,            KC_L,            KC_SCLN,            KC_EQL,
+    KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_E),       LSFT_T(KC_T),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_Y),       RSFT_T(KC_N),    RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
+    KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_P,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_ENT ),      LT(_SYM,  KC_SPC),    LT(_NAV, KC_TAB),      LT(_NAV, KC_ENT),     LT(_SYM, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    ),
+
 
 // /*
 //  * Symbol Layer: Symbols only
