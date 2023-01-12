@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
     [_QWERTY] = LAYOUT(
-      KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
+      KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            LT(_IDEA, KC_EQL),
       KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),    MEH_T(KC_G),                                                                                    MEH_T(KC_H),        RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
       KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
@@ -102,9 +102,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * IDEA layer
  */
     [_IDEA] = LAYOUT(
-      _______,  A(KC_0),  LSA(KC_0),  _______,  _______,  _______,                                      RCS(KC_F14),  S(KC_F10),  S(KC_F9),  C(KC_F2),  A(KC_V), _______,
-      _______,  A(KC_1),  _______,  _______,  _______,  _______,                                       RCS(KC_F8),  MEH(KC_F9),  _______,  _______,  _______, _______,
-      _______,  A(KC_9),  A(KC_4),  A(KC_5),  _______,  A(KC_F12), _______, _______,   _______, _______, _______,  _______,  _______,  _______,  RCS(KC_GRV), _______,
+      _______,  A(KC_0),  LSA(KC_0),  XXXXXXX,  XXXXXXX,  XXXXXXX,                                      RCS(KC_F14),  S(KC_F10),  S(KC_F9),  C(KC_F2),  A(KC_V), _______,
+      _______,  A(KC_1),  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                       RCS(KC_F8),  MEH(KC_F9),  XXXXXXX,  XXXXXXX,  XXXXXXX, _______,
+      _______,  A(KC_9),  A(KC_4),  A(KC_5),  XXXXXXX,  A(KC_F12), _______, _______,   _______, _______, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RCS(KC_GRV), _______,
                                     C(KC_MINS),  C(KC_PLUS),  _______, _______, _______,   _______, _______, _______,  _______,  _______
     ),
 
@@ -190,7 +190,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     // shifting slowly
 
     // [_BASE] = LAYOUT(
-    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            KC_EQL,
+    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            LT(_IDEA, KC_EQL),,
     //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
     //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
@@ -199,7 +199,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 // 5 swap qwkrfy
 
     // [_BASE  ] = LAYOUT(
-    //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            KC_EQL,
+    //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            LT(_IDEA, KC_EQL),,
     //   KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
     //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
@@ -207,7 +207,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
 // QGMLWY
     // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            KC_EQL,
+    // KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            LT(_IDEA, KC_EQL),,
     // KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_T),       LSFT_T(KC_N),   MT(KC_HYPR, KC_R),                                                                                    MT(KC_HYPR, KC_I),       RSFT_T(KC_A),    RCTL_T(KC_E),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
     // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_J,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_P,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
@@ -215,7 +215,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
 // Colemak
     // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_W,             KC_F,               KC_P,                KC_G,                                                                                                   KC_J,               KC_L,            KC_U,            KC_Y,            KC_SCLN,            KC_EQL,
+    // KC_ESC,             KC_Q,           KC_W,             KC_F,               KC_P,                KC_G,                                                                                                   KC_J,               KC_L,            KC_U,            KC_Y,            KC_SCLN,            LT(_IDEA, KC_EQL),,
     // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_R),     LCTL_T(KC_S),       LSFT_T(KC_T),   MT(KC_HYPR, KC_D),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_E),    LALT_T(KC_I),    RGUI_T(KC_O),        KC_QUOT,
     // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
@@ -223,7 +223,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
 // qwpr https://sourceforge.net/p/qwpr/wiki/Home/
     // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_W,             KC_P,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_K,            KC_L,            KC_SCLN,            KC_EQL,
+    // KC_ESC,             KC_Q,           KC_W,             KC_P,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_K,            KC_L,            KC_SCLN,            LT(_IDEA, KC_EQL),,
     // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_T),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_E),        KC_QUOT,
     // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_J,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
