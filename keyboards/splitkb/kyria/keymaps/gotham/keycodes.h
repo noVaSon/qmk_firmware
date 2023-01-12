@@ -2,12 +2,14 @@
 
 #include "quantum.h"
 
-enum layers { _BASE = 0, _SYM, _NUM, _NAV, _FUN, _IDEA };
+enum layers { _NORMAN = 0, _QWERTY ,_SYM, _NUM, _NAV, _FUN, _IDEA };
 
 enum custom_keycodes {
     ENC_MODE_L = SAFE_RANGE,
     ENC_MODE_R,
     TMB_MODE,
+    DEFAULT_QWERTY,
+    DEFAULT_NORMAN
 };
 
 #define TEAMS_MUTE_MIC   C(S(KC_M))

@@ -34,92 +34,25 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * Base Layer: QWERTY
- *
- * ,--------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
- * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
- * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
- * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |      |      |  |      |      |      |      |         |
- *                        |      |      |      |      |      |  |      |      |      |      | mute mic|
- *                        `----------------------------------'  `----------------------------------'
-*  TODO 3l layout, split layout
-* TODO extra layout 3L Colemak qglm*
-* TODO macro
-* TODO comment?
-*/
+ */
 
-    // [_QWERTY] = LAYOUT(
-    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
-    //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
-    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
-
-    // shifting slowly
-
-    // [_BASE] = LAYOUT(
-    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            KC_EQL,
-    //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
-    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
-
-// 5 swap qwkrfy
-
-    // [_BASE  ] = LAYOUT(
-    //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            KC_EQL,
-    //   KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
-    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
-
-// QGMLWY
-    // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            KC_EQL,
-    // KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_T),       LSFT_T(KC_N),   MT(KC_HYPR, KC_R),                                                                                    MT(KC_HYPR, KC_I),       RSFT_T(KC_A),    RCTL_T(KC_E),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
-    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_J,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_P,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
-
-// Colemak
-    // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_W,             KC_F,               KC_P,                KC_G,                                                                                                   KC_J,               KC_L,            KC_U,            KC_Y,            KC_SCLN,            KC_EQL,
-    // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_R),     LCTL_T(KC_S),       LSFT_T(KC_T),   MT(KC_HYPR, KC_D),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_E),    LALT_T(KC_I),    RGUI_T(KC_O),        KC_QUOT,
-    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
-
-// qwpr https://sourceforge.net/p/qwpr/wiki/Home/
-    // [_BASE  ] = LAYOUT(
-    // KC_ESC,             KC_Q,           KC_W,             KC_P,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_K,            KC_L,            KC_SCLN,            KC_EQL,
-    // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_T),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_E),        KC_QUOT,
-    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_J,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
-    // ),
+    [_QWERTY] = LAYOUT(
+      KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_P,            KC_EQL,
+      KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),    MEH_T(KC_G),                                                                                    MEH_T(KC_H),        RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN),        KC_QUOT,
+      KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    ),
 
 
-// norman https://sourceforge.net/p/qwpr/wiki/Home/   qwdfkjurl;
-    [_BASE  ] = LAYOUT(
+/*
+ * Base Layer:  norman https://sourceforge.net/p/qwpr/wiki/Home/   qwdfkjurl;
+ */
+    [_NORMAN  ] = LAYOUT(
     KC_ESC,             KC_Q,           KC_W,             KC_D,               KC_F,                KC_K,                                                                                                   KC_J,               KC_U,            KC_R,            KC_L,            KC_SCLN,           LT(_IDEA, KC_EQL),
     KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_E),       LSFT_T(KC_T),   MEH_T(KC_G),                                                                                    MEH_T(KC_Y),       RSFT_T(KC_N),    RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
     KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_P,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
                                                     ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
     ),
-
-
-// /*
-//  * Symbol Layer: Symbols only
-//  TODO: 3l layout
-//  */
-//     [_SYM] = LAYOUT(
-//       _______, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-//       _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                        KC_MINS, KC_PLUS, KC_ASTR, KC_SLSH, KC_PERC, _______,
-//       _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______,   _______, _______, KC_AMPR, KC_PIPE, KC_COMM, KC_DOT,  KC_SLSH, _______,
-//                                  _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______
-//     ),
 
 /*
  * Symbol Layer: Symbols only
@@ -133,7 +66,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 
-
 /*
 * Nav Layer: movement and history
 */
@@ -143,28 +75,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, C(KC_Z),    C(KC_X),     C(KC_C),   C(KC_V),  C(KC_Y),   _______, _______,   _______, _______,  XXXXXXX, XXXXXXX, KC_BTN3, XXXXXXX, KC_BTN6, KC_ACL2,
                                         _______, _______,     _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
   ),
-
-// /*
-// * Mouse Layer: mouse control
-// TODO> SWAP sides with eddssf
-// */
-//     [_MSE] = LAYOUT(
-//       _______, _______,  _______, _______, _______, _______,                                       _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_ACL0,
-//       _______, _______,  _______, _______, _______, _______,                                       _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ACL1,
-//       _______, C(KC_Z),  KC_CUT,  KC_COPY, KC_PSTE, C(KC_Y), _______, _______,   _______, _______, KC_PGDN, _______, KC_BTN3, _______, _______, KC_ACL2,
-//                                   _______, _______, _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
-//   ),
-
-// /*
-// * Mouse Layer: mouse control
-// TODO> SWAP sides with eddssf
-// */
-//     [_MSE] = LAYOUT(
-//       _______, _______,  _______, _______, _______, _______,                                       KC_WH_U, KC_WH_L, KC_MS_U, KC_WH_R, KC_BTN4, KC_ACL0,
-//       _______, _______,  _______, _______, _______, _______,                                       KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_ACL1,
-//       _______, C(KC_Z),  KC_CUT,  KC_COPY, KC_PSTE, C(KC_Y), _______, _______,   _______, _______, XXXXXXX, XXXXXXX, KC_BTN3, XXXXXXX, KC_BTN6, KC_ACL2,
-//                                   _______, _______, _______, _______, _______,   _______, _______, KC_BTN1, KC_BTN2, _______
-//   ),
 
 /*
  * Numblock layer
@@ -184,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_FUN] =LAYOUT(
       DB_TOGG, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                       KC_F12,   KC_F7,   KC_F8,  KC_F9,  KC_F15, TEAMS_CAM,
       _______, _______, _______, _______, _______, KC_VOLD,                                       KC_F11,   KC_F4,   KC_F5,  KC_F6,  KC_F14, TEAMS_HAND,
-      _______, _______, _______, _______, _______, KC_MUTE, _______, _______,   _______, _______, KC_F10,   KC_F1,   KC_F2,  KC_F3,  KC_F13, TEAMS_HANGUP,
+      _______, _______, _______, _______, _______, KC_MUTE, _______, DEFAULT_QWERTY,   DEFAULT_NORMAN, _______, KC_F10,   KC_F1,   KC_F2,  KC_F3,  KC_F13, TEAMS_HANGUP,
                                  _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______
     ),
 
@@ -239,6 +149,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 thumbstick_mode_cycle(false);
             }
 #endif
+case DEFAULT_QWERTY:
+set_single_persistent_default_layer(_QWERTY);
+break;
+
+case DEFAULT_NORMAN:
+set_single_persistent_default_layer(_NORMAN);
+break;
     }
     return true;
 }
@@ -268,3 +185,46 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return true;
 }
 #endif
+
+
+    // shifting slowly
+
+    // [_BASE] = LAYOUT(
+    //   KC_ESC,             KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_O,            KC_SCLN,            KC_EQL,
+    //   KC_TAB ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_J),    RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
+    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_N,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
+
+// 5 swap qwkrfy
+
+    // [_BASE  ] = LAYOUT(
+    //   KC_ESC,             KC_Q,           KC_W,             KC_K,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_I,            KC_J,            KC_SCLN,            KC_EQL,
+    //   KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_A),       LSFT_T(KC_T),   MT(KC_HYPR, KC_N),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_O),    RCTL_T(KC_E),    LALT_T(KC_L),    RGUI_T(KC_P),        KC_QUOT,
+    //   KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_G,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
+
+// QGMLWY
+    // [_BASE  ] = LAYOUT(
+    // KC_ESC,             KC_Q,           KC_G,             KC_M,               KC_L,                KC_W,                                                                                                   KC_Y,               KC_F,            KC_U,            KC_B,            KC_SCLN,            KC_EQL,
+    // KC_TAB ,      LGUI_T(KC_D),   LALT_T(KC_S),     LCTL_T(KC_T),       LSFT_T(KC_N),   MT(KC_HYPR, KC_R),                                                                                    MT(KC_HYPR, KC_I),       RSFT_T(KC_A),    RCTL_T(KC_E),    LALT_T(KC_O),    RGUI_T(KC_H),        KC_QUOT,
+    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_J,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_P,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
+
+// Colemak
+    // [_BASE  ] = LAYOUT(
+    // KC_ESC,             KC_Q,           KC_W,             KC_F,               KC_P,                KC_G,                                                                                                   KC_J,               KC_L,            KC_U,            KC_Y,            KC_SCLN,            KC_EQL,
+    // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_R),     LCTL_T(KC_S),       LSFT_T(KC_T),   MT(KC_HYPR, KC_D),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_E),    LALT_T(KC_I),    RGUI_T(KC_O),        KC_QUOT,
+    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_K,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
+
+// qwpr https://sourceforge.net/p/qwpr/wiki/Home/
+    // [_BASE  ] = LAYOUT(
+    // KC_ESC,             KC_Q,           KC_W,             KC_P,               KC_R,                KC_F,                                                                                                   KC_Y,               KC_U,            KC_K,            KC_L,            KC_SCLN,            KC_EQL,
+    // KC_BSPC ,      LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_T),   MT(KC_HYPR, KC_G),                                                                                    MT(KC_HYPR, KC_H),       RSFT_T(KC_N),    RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_E),        KC_QUOT,
+    // KC_LSFT,             KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),      MO(_FUN),              TEAMS_MUTE_MIC,              MO(_FUN),             KC_J,               KC_M,            KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                    // ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),      KC_APP,         KC_MUTE
+    // ),
