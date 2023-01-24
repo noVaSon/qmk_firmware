@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUM] = LAYOUT(
       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                          KC_COMM,  KC_7,    KC_8,    KC_9,  KC_ASTR, KC_PSLS,
       _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,                                          KC_DOT,   KC_4,    KC_5,    KC_6,  KC_PEQL, KC_AMPR,
-      _______, KC_PLUS, KC_PMNS, KC_PEQL, KC_DOT,  KC_COMM, _______, _______,   _______, _______, KC_0,     KC_1,    KC_2,    KC_3,  KC_PLUS, KC_PMNS,
+      _______, KC_PLUS, KC_PMNS, KC_PEQL, KC_DOT,  KC_COMM, _______, _______,   _______, _______, KC_0,     KC_1,    KC_2,    KC_3,  KC_PPLS, KC_PMNS,
                                  _______, _______, _______, _______, _______,   _______, _______, _______,  _______, KC_0
     ),
 
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_IDEA] = LAYOUT(
       _______,  A(KC_0),  LSA(KC_0),  XXXXXXX,  XXXXXXX,  XXXXXXX,                                      RCS(KC_F14),  S(KC_F10),  S(KC_F9),  C(KC_F2),  A(KC_V), _______,
-      _______,  A(KC_1),  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                       RCS(KC_F8),  MEH(KC_F9),  XXXXXXX,  XXXXXXX,  XXXXXXX, _______,
+      _______,  A(KC_1),  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                                       RCS(KC_F8),  MEH(KC_F9),  A(KC_S), XXXXXXX,  XXXXXXX, _______,
       _______,  A(KC_9),  A(KC_4),  A(KC_5),  XXXXXXX,  A(KC_F12), _______, _______,   _______, _______, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  RCS(KC_GRV), _______,
                                     C(KC_MINS),  C(KC_PLUS),  _______, _______, _______,   _______, _______, _______,  _______,  _______
     ),
