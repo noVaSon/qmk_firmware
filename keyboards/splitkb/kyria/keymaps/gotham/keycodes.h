@@ -9,7 +9,8 @@ enum custom_keycodes {
     ENC_MODE_R,
     TMB_MODE,
     DEFAULT_QWERTY,
-    DEFAULT_NORMAN
+    DEFAULT_NORMAN,
+    COMMENT
 };
 
 #define TEAMS_MUTE_MIC   C(S(KC_M))
