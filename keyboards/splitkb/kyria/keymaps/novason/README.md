@@ -5,7 +5,7 @@ This is my personal keymap for Kyria with some mods.
 
 More information about the Kyria keyboard can be found [here](https://blog.splitkb.com/blog/introducing-the-kyria)
 
-As I use an elite Pi MCU, I need to compile with `qmk compile -kb splitkb/kyria/rev2 -km gotham -e CONVERT_TO=elite_pi`
+As I use an elite Pi MCU, I need to compile with `qmk compile -kb splitkb/kyria/rev2 -km novason -e CONVERT_TO=elite_pi`
 Then double tap the reset button, which reuslts in mounting the board as drive F:\ on my windows machine.
 Flash by simply copying the reulsting file with `cp qmk_firmware/splitkb_kyria_rev2_gotham_elite_pi.uf2 /f/`, where `/f/` stands for drive F:
 
