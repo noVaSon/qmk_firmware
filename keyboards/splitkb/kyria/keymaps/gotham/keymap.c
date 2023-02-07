@@ -37,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
     [_QWERTY] = LAYOUT(
-      LT(_IDEA, KC_ESC),    KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                       KC_Y,                  KC_U,                KC_I,            KC_O,            KC_P,            LT(_IDEA, KC_EQL),
-      KC_BSPC ,             LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),        MEH_T(KC_G),                                                                                MEH_T(KC_H),           RSFT_T(KC_J),        RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN), KC_QUOT,
-      OSM(KC_LSFT),         KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,              MO(_FUN),   TEAMS_MUTE_MIC,        TEAMS_MUTE_MIC,       MO(_FUN),          KC_N,               KC_M,                KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                    ENC_MODE_L,         KC_RALT,        LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),  LT(KC_LOCK, KC_APP), KC_MUTE
+      LT(_IDEA, KC_ESC),    KC_Q,           KC_W,             KC_E,               KC_R,                KC_T,                                                                                                         KC_Y,                  KC_U,                KC_I,            KC_O,            KC_P,            LT(_IDEA, KC_EQL),
+      KC_BSPC ,             LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_D),       LSFT_T(KC_F),        MEH_T(KC_G),                                                                                                  MEH_T(KC_H),           RSFT_T(KC_J),        RCTL_T(KC_K),    LALT_T(KC_L),    RGUI_T(KC_SCLN), KC_QUOT,
+      KC_LSFT,              KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,                   MO(_FUN),             TEAMS_MUTE_MIC,        TEAMS_MUTE_MIC,       MO(_FUN),          KC_N,               KC_M,                KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                              ENC_MODE_L,         KC_RALT,             LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),      LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),   KC_APP, KC_MUTE
     ),
 
 
@@ -48,10 +48,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer:  norman https://sourceforge.net/p/qwpr/wiki/Home/   qwdfkjurl;
  */
     [_NORMAN  ] = LAYOUT(
-    LT(_IDEA, KC_ESC),  KC_Q,           KC_W,             KC_D,               KC_F,                KC_K,                                                                                                             KC_J,               KC_U,               KC_R,            KC_L,            KC_SCLN,         LT(_IDEA, KC_EQL),
-    KC_BSPC ,           LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_E),       LSFT_T(KC_T),        MEH_T(KC_G),                                                                                                      MEH_T(KC_Y),        RSFT_T(KC_N),       RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_H),    KC_QUOT,
-    OSM(KC_LSFT),       KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,                   MO(_FUN),             TEAMS_MUTE_MIC,            TEAMS_MUTE_MIC,       MO(_FUN),          KC_P,               KC_M,               KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
-                                                          ENC_MODE_L,         KC_RALT,             LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),          LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),  KC_APP,             KC_MUTE
+    LT(_IDEA, KC_ESC),  KC_Q,           KC_W,             KC_D,               KC_F,                KC_K,                                                                                                             KC_J,               KC_U,                 KC_R,            KC_L,            KC_SCLN,         LT(_IDEA, KC_EQL),
+    KC_BSPC ,           LGUI_T(KC_A),   LALT_T(KC_S),     LCTL_T(KC_E),       LSFT_T(KC_T),        MEH_T(KC_G),                                                                                                      MEH_T(KC_Y),        RSFT_T(KC_N),         RCTL_T(KC_I),    LALT_T(KC_O),    RGUI_T(KC_H),    KC_QUOT,
+    KC_LSFT,            KC_Z,           KC_X,             KC_C,               KC_V,                KC_B,                   MO(KC_LOCK),          TEAMS_MUTE_MIC,            TEAMS_MUTE_MIC,       MO(_FUN),          KC_P,               KC_M,                 KC_COMM,         KC_DOT,          KC_SLSH,         KC_MINS,
+                                                          ENC_MODE_L,         KC_RALT,             LT(_NUM, KC_TAB ),      LT(_NAV,  KC_SPC),    LT(_SYM, KC_ENT),          LT(_SYM, KC_ENT),     LT(_NAV, KC_BSPC), LT(_NUM, KC_DEL ),  KC_APP,  KC_MUTE
     ),
 
 /*
